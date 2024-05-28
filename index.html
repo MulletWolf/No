@@ -6,7 +6,7 @@
         <title>Mysterra</title>
         <Meta name ="keywords" content = "gym,fitness,body,nutition,health,wellbeing,workouts,gym accessories,gym supplements,strength,">
         <Meta name="author" content ="Diana Ogualiri">
-        <script src="https://kit.fontawesome.com/bee31374a2.js" crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/bee31374a2.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type ="text/css" href="style/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,8 +16,8 @@
     </head>
     <body class="grid_container">
        
-        <nav >
-            <div class="logo1">
+        <nav id="navbar"class="navbar open" >
+            <div class="logo">
              <a href="#"><img id="logo"src="images/logo.png"></a>
             </div>
             
@@ -30,19 +30,130 @@
                 
             </ul>
            
-                 <label id ="menu">
-                    <span class="menu1"></span>
-                    <span class="menu1"></span>
-                    <span class="menu1"></span>
-                 </label> 
+                 <button id ="menu">
+                   <i class="fa-solid fa-bars" ></i>
+                   <!-- <i class="fa-solid fa-xmark-large" id="close"></i> -->
+                 </button> 
+                 <script>
+                    const openmenu=document.querySelector("#menu");
+                    const navbar =document.querySelector("#navbar");
+                    openmenu.addEventListener("click",onMenuClick);
+
+                    function onMenuClick(){
+                        if(!navbar.classList.contains("open")){
+                            navbar.classList.add("open");
+                        }
+                        else{
+                            navbar.classList.remove("open");
+                            
+                        }
+                        
+ 
+                       }
+                 </script>
               
            
         </nav>
-        <div class="content">
+        <main id="grid_container">
+            <section class="section1">
+                <div class="hero-row">
+                    <img id="hero-img"src="images/hero.png" >
+                    <div class="hero-txt">
+                        <h3>The future is in your hands</h3>
+                        <h1>Trainings that turn regrets into success</h1>
+                        <p>Mysterra provides online personalized  trainings to customers at low costs.
+                           Be prepared to transform into your desired physique. Put yourself first.
+                        </p>
+                        <button id="b1"><a href="#">Join Us</a></button>
+                     
+                    </div>
+                   
+                </div>
+
+            </section>
+            <section class=section2>
+                <header>
+                    <h2>Our Provisions</h2>
+                    <p>We provide you with physical resources and mental tools to push your boundaries.We understand your struggles with pushing yourself and we will help you to overcome them.
+                        The pain you feel today will be the strength you feel tomorrow. </p>
+                </header>
+                <div class="row1">
+                <div class="col1">
+                    <img src="images/Knowledge.png">
+                    <h3>Knowledge is Power</h3>
+                    <p>Learn the latest easy-to-understand muscle building advice.You will have a better understanding 
+                          before starting your fitness journey.
+                        </p>
+
+                </div>
+                <div class="col1">
+                   <img src="images/Strength.png">
+                    <h3>Exclusive 6 week fitness transformation program </h3>
+                    <p>Through this, we will guide your through our proven system of creating a better version of yourself in the next 6 weeks.
+                    </p>
+                   
+                    
+                </div>
+                <div class="col1">
+                    <img src="images/nutrients.png">
+                    <h3>Meal prep ideas</h3>
+                    <p>Try out our delicious easy to make recipes that saves your time on our app.</p>
+                   
+                </div>
+
+            </div>
+            </section>
+            <section class="section3">
+                <header class="header3">
+                    <h2>Our Services</h2>
+                    <p>Our company provides a fantasic range of online training services and plans for your well-being which includes the following.
+                        We aim to make our customers be in better shape to boost their confidence and other better returns.We want you to stay consistent for yourself.</p>
+
+                </header>
+
+                <div class="row2">
+
+                    <div class="col2">
+                        <div class="icons">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+                        <h3>Nutrition Coaching</h3>
+                        <p>Our nutrition program will help you understand what your body needs and how to be in charge of it. We assist you in many ways such as, we help you to create the best meals that align with your goals.
+                        </p>
+                        <a class="btn" href="Servises.html">Read more</a>  
+                    </div>
+
+                    <div class="col2">
+                        <div class="icons">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3>Consultations</h3>
+                         <p>We provide expert advice on workout planning, meal preperation, muscle growth and more to speed up your start up process. We provide a welcoming and friendly enviornment to support you.                     
+                          </p>
+                          <a class="btn" href="Contact.html">Read more</a>
+                          
+                    </div>
+
+                    <div class="col2">
+                        <div class="icons">
+                            <i class="fa-solid fa-dumbbell"></i>
+                        </div>
+                         <h3>1-2-1 Personal Training</h3>
+                         <p>Our personal training sessions have been designed to put you and your goals first.We will help you to adapt and make changes to yourself.We offer one on one training on calls,email and more.
+                         </p>
+                         <a class="btn" href="Servises.html">Read more</a>   
+                    </div>
+
+                </div>
+            </section>
+            
+
+        </main>
+        <!-- <content class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat esse earum, id exercitationem explicabo laudantium enim autem aperiam minima magnam vero accusamus iusto, omnis, voluptates natus deleniti ullam non excepturi.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit commodi saepe praesentium optio quis ab minus, asperiores itaque laudantium fuga incidunt beatae ea, aperiam architecto officiis temporibus labore vel mollitia?</p>
-        </div>
-        <div class="footer"></div>
+        </main>
+        <div class="footer"></div> -->
     </body>
       
 
